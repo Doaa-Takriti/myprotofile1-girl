@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+ 
+  <link rel="stylesheet" type="text/css" href="css/hover.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="css/style.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body >
+<section class="container-fluid" style="padding-left: 0;">
+  <button onclick="topFunction()" id="myBtn1" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="50" height="50"
+viewBox="0 0 226 226"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,226v-226h226v226z" fill="none"></path><g><path d="M107.35,217.525c-7.1642,0 -13.8199,-2.9719 -18.7354,-8.37895l-0.4746,-0.5198l-0.6667,-0.2373c-23.5944,-8.40155 -39.4483,-30.84335 -39.4483,-55.83895v-82.59735c0,-14.77475 12.01755,-26.7923 26.7923,-26.7923h65.0654c14.77475,0 26.7923,12.01755 26.7923,26.7923v82.59735c0,24.9956 -15.8539,47.4374 -39.4483,55.83895l-0.6667,0.2373l-0.4746,0.5198c-4.9155,5.40705 -11.5712,8.37895 -18.7354,8.37895z" fill="#fcf0d1"></path><path d="M139.8827,45.98535c13.21535,0 23.9673,10.75195 23.9673,23.9673v82.59735c0,23.80345 -15.0968,45.17175 -37.5725,53.1778l-1.3334,0.4746l-0.9492,1.04525c-4.3731,4.80815 -10.28865,7.45235 -16.6449,7.45235c-6.35625,0 -12.2718,-2.64985 -16.6449,-7.458l-0.9492,-1.04525l-1.3334,-0.4746c-22.4757,-8.0004 -37.5725,-29.3687 -37.5725,-53.17215v-82.59735c0,-13.21535 10.75195,-23.9673 23.9673,-23.9673h65.0654M139.8827,40.33535h-65.0654c-16.35675,0 -29.6173,13.26055 -29.6173,29.6173v82.59735c0,27.007 17.26075,49.92905 41.3241,58.5001c5.16975,5.6726 12.543,9.2999 20.8259,9.2999c8.2829,0 15.65615,-3.6273 20.8259,-9.30555c24.06335,-8.5654 41.3241,-31.48745 41.3241,-58.49445v-82.59735c0,-16.35675 -13.26055,-29.6173 -29.6173,-29.6173z" fill="#9b48ba"></path><path d="M139.8375,136.0068c-4.23439,0 -7.66705,3.43266 -7.66705,7.66705c0,4.23439 3.43266,7.66705 7.66705,7.66705c4.23439,0 7.66705,-3.43266 7.66705,-7.66705c0,-4.23439 -3.43266,-7.66705 -7.66705,-7.66705zM78.49545,136.0068c-4.23439,0 -7.66705,3.43266 -7.66705,7.66705c0,4.23439 3.43266,7.66705 7.66705,7.66705c4.23439,0 7.66705,-3.43266 7.66705,-7.66705c0,-4.23439 -3.43266,-7.66705 -7.66705,-7.66705z" fill="#36404d"></path><g><path d="M175.15,211.875c-15.7409,0 -30.2727,-5.64435 -37.25045,-8.8479c9.03435,-6.328 28.77545,-23.4023 28.77545,-51.68055v-39.0076c0,-21.3231 -23.01245,-35.09215 -23.99555,-35.6628l-2.5199,-1.48595l-1.39555,2.57075c-0.1469,0.2712 -15.22675,27.233 -52.99135,32.44795c-18.1817,2.5086 -37.74765,15.4245 -37.74765,37.8437l5.65,0.46895l-5.65,-0.12995v2.9493c0,28.6568 21.6508,46.3865 31.7643,53.10435c-7.56535,2.7911 -22.04065,7.42975 -34.5893,7.42975c-21.8316,0 -32.57225,-10.0909 -35.9679,-14.08545c4.55955,-5.8421 18.4077,-24.75265 18.4077,-38.77595c0,-7.57665 -1.7515,-16.3059 -3.6047,-25.54365c-2.0905,-10.45815 -4.2601,-21.26095 -4.2601,-31.76995c0,-58.3532 41.5501,-93.225 81.7216,-93.225c30.171,0 42.84395,20.9954 42.9626,21.20445l0.8249,1.39555h1.6159c26.01825,0 53.675,20.792 53.675,59.325c0,12.53735 -2.7459,25.70185 -5.40705,38.43695c-2.3052,11.04575 -4.48045,21.47565 -4.48045,30.17665c0,17.4472 17.5715,32.996 24.9278,38.74205c-6.3506,4.43525 -22.2949,14.11935 -40.4653,14.11935z" fill="#e19cff"></path><path d="M101.4966,11.3c28.2952,0 40.0585,19.02355 40.52745,19.8089l1.6385,2.7911h3.23745c24.65095,0 50.85,19.80325 50.85,56.5c0,12.24355 -2.71765,25.2668 -5.3449,37.855c-2.33345,11.19265 -4.5426,21.7638 -4.5426,30.75295c0,16.50365 14.37925,31.188 23.00115,38.5104c-7.345,4.63865 -20.7807,11.53165 -35.71365,11.53165c-12.4413,0 -24.14245,-3.6725 -31.6739,-6.7009c10.26605,-8.25465 26.0239,-25.1425 26.0239,-51.0082v-39.0076c0,-22.92205 -24.3515,-37.4934 -25.38545,-38.1036l-5.0511,-2.96625l-2.7798,5.15845c-0.14125,0.2599 -14.3849,25.9448 -50.88955,30.9846c-19.36255,2.67245 -40.1941,16.5319 -40.1941,40.6461v0.339v2.9493c0,26.15385 17.14775,43.5615 28.5212,52.23425c-7.78005,2.55945 -18.7919,5.47485 -28.5212,5.47485c-18.0348,0 -27.99575,-7.22635 -32.2615,-11.42995c5.7743,-7.6501 17.53195,-24.89955 17.53195,-38.6121c0,-7.8535 -1.77975,-16.71835 -3.6612,-26.09735c-2.0679,-10.3169 -4.20925,-20.97845 -4.20925,-31.2106c0,-56.58475 40.115,-90.4 78.8966,-90.4M101.4966,5.65c-42.0021,0 -84.5466,36.56115 -84.5466,96.05c0,20.2609 7.87045,41.7083 7.87045,57.30795c0,15.59965 -19.17045,38.74205 -19.17045,38.74205c0,0 10.87625,16.95 39.55,16.95c18.66195,0 40.9399,-9.71235 40.9399,-9.71235c0,0 -35.2899,-18.3399 -35.2899,-53.64675c0,-2.5086 0,-2.9493 0,-2.9493v0.12995c0,0 0,-0.09605 0,-0.46895c0,-20.7807 18.3173,-32.7022 35.3125,-35.0526c39.7647,-5.4918 55.0875,-33.9 55.0875,-33.9c0,0 22.6,13.2775 22.6,33.2333c0,8.62755 0,24.84305 0,39.0076c0,34.6345 -31.67955,51.9913 -31.67955,51.9913c0,0 20.0688,11.3678 42.97955,11.3678c24.8148,0 45.2,-16.95 45.2,-16.95c0,0 -26.8375,-18.3851 -26.8375,-38.74205c0,-18.08565 9.8875,-44.635 9.8875,-68.60795c0,-40.6574 -29.7981,-62.15 -56.5,-62.15c0,0 -13.2662,-22.6 -45.4034,-22.6z" fill="#a14a9a"></path></g></g></g></svg>
+    <span><img src="https://img.icons8.com/doodle/50/000000/hello--v1.png"/></span>
+  </button>
+
+
+  <div class="sidebar1">
+    <ul>
+      <li class=" section1 ">
+     <a href="#section1">
+        <img src="https://img.icons8.com/office/50/000000/home--v1.png"/>
+     </a>
+    </li >
+      <li class="section2">
+        <a href="#section2">
+          <img src="https://img.icons8.com/office/50/000000/person-female.png"/>
+
+        </a>
+      </li>
+      <li class="section3">
+        <a href="#section3">
+          <img src="https://img.icons8.com/dusk/50/000000/google-code.png"/>
+
+
+        </a>
+      </li>
+
+      <li class="section4">
+        <a href="#section4">
+          <img src="https://img.icons8.com/nolan/50/web.png"/>
+        </a>
+     </li>
+      <li class="section5">
+        <a href="#section5">
+          <img src="https://img.icons8.com/plasticine/50/000000/phonelink-ring--v1.png"/>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <div class="content1 "  >
+    <div id="particles-js">
+  
+    </div>
+    
+ 
+    <div class="container-fluid">
+  <div class="nav1">
+    <span class="">
+      <img src="https://img.icons8.com/office/50/000000/menu--v1.png" class="sidebar-toggle"/>
+    </span>
+    <span style="text-align: right;">light mode</span>
+  </div>
+  <div class="header1 sectionns1" id="section1" >
+    <div class="container-fluid">
+        <div class="waters">
+          <h1> I'm doaa takriti</h1>
+          <h1>I'm doaa takriti</h1>
+
+
+        </div>
+
+
+        <div id="typed-strings">
+         
+        </div>
+        <span id="typed"></span>
+        
+
+        <br/>
+        <button id="hello" class="btn  hvr-bounce-to-right">show mu protofile</button>
+    
+
+    </div>
+
+    
+  </div> 
+ 
+
+  <div class="who-iam" >
+   <div class="row sectionns1" id="section2">
+     <div class="col-md-6">
+       <div class="about-me wow slideInLeft" data-wow-duration="2s" data-wow-offset="10"  >
+         <div     data-aos="fade-up"
+         data-aos-offset="200"
+         data-aos-delay="50"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out-cubic"
+         data-aos-mirror="false"
+         data-aos-once="false"
+         data-aos-anchor-placement="top-center">
+         <h1 id="who1">i'm <span>doaa takriti</span></h1>
+         <p ><span> a front end developer</span> living in syria </p>
+         <p>i'm currently working as a freelancer</p>
+         <p>i'm 29 years old with <span>2 years of experience</span></p>
+         <p> i look forward to elegance and smoother in the designs </p>
+
+         </div>
+         <button id="contact-button" class="btn  hvr-bounce-to-bottom">contact me</button>
+
+
+       </div>
+     </div>
+     <div class="col-md-6 ">
+       <div class="my-picture ">
+         <img src="https://cdn-images-1.medium.com/max/800/1*xrs6xnfotp-01hXBecuuDg.jpeg">
+
+       </div>
+     </div>
+   </div>
+
+
+   <div class="my-skills " >
+    <h1>my skills</h1>
+
+    <div class="row sectionns1 " id="section3">
+      <div class="col-md-3 ">
+        <div class="skill1 p-6 "    data-aos="fade-down"
+        data-aos-delay="10"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out-cubic"
+ >
+       <div class="row">
+         <div class="col-6">
+           <img src="https://img.icons8.com/color/50/000000/html-5--v1.png"/>
+         </div>
+         <div class="col-6" style="margin: auto;">
+         <span> html5</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+      <div class="col-md-3 " >
+        <div class="skill1 p-6 " 
+        data-aos="fade-down"
+        data-aos-delay="20"
+        data-aos-duration="1200"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/dusk/50/000000/css3.png"/>
+         </div>
+         <div class="col-6" style="margin: auto;">
+         <span> css3</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill1 p-6 "
+        data-aos="fade-down"
+        data-aos-delay="30"
+        data-aos-duration="1400"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/color/50/000000/bootstrap.png"/>
+         </div>
+         <div class="col-6" style="margin: auto;">
+         <span> bootstrap</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill1 p-6 "
+        data-aos="fade-down"
+        data-aos-delay="40"
+        data-aos-duration="1600"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/color/50/000000/javascript--v1.png"/>
+         </div>
+         <div class="col-6" style="margin: auto;">
+         <span> javascript</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+    
+    </div>
+    <div class="row " style="margin-top: 50px;">
+      <div class="col-md-3">
+        <div class="skill1 p-6 "
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-duration="1800"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/color/50/000000/sass-avatar.png"/>
+        </div>
+         <div class="col-6" style="margin: auto;">
+         <span> sass</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill1 p-6 "
+        data-aos="fade-up"
+        data-aos-delay="60"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/nolan/50/github.png"/>         </div>
+         <div class="col-6" style="margin: auto;">
+         <span> github</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill1 p-6 "   data-aos="fade-up"
+        data-aos-delay="70"
+        data-aos-duration="2200"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/color/50/000000/command-line.png"/>         </div>
+         <div class="col-6" style="margin: auto;">
+         <span> command line</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="skill1 p-6 "
+        data-aos="fade-up"
+        data-aos-delay="80"
+        data-aos-duration="2400"
+        data-aos-easing="ease-in-out-cubic">
+       <div class="row">
+         <div class="col-6">
+          <img src="https://img.icons8.com/officel/50/000000/react.png"/>         </div>
+         <div class="col-6" style="margin: auto;">
+         <span>react</span>
+         </div>
+       </div>
+
+        </div>
+      </div>
+    
+    </div>
+
+
+    <div class="contact1 sectionns1" id="section5">
+      <h1>contact me</h1>
+      <div class="row" >
+        <div class="col-6">
+          <div class="text-center" >
+            <p>email : doaatakriti@gmail.com</p>
+            <p>phone: +963988169232</p>
+            <p>location: damascus-syria</p>
+          </div>
+        </div>
+  
+      </div>
+     <div class="row" id="icons">
+       <div class="col-1">
+         <div>
+          <i class="fa fa-facebook"
+        ></i>
+         </div>
+       </div>
+       <div class="col-1">
+        <div>
+          <i class="fa fa-instagram"
+    
+
+       ></i>
+
+        </div>
+      </div>
+      <div class="col-1">
+        <div>
+          <i class="fa fa-github"></i>
+
+        </div>
+      </div>
+      <div class="col-1">
+        <div>
+          <i class="fa fa-telegram"></i>
+
+        </div>
+      </div>
+     </div>
+    </div>
+  </div>
+  </div>
+
+ 
+</div>
+  </div>
+</section>
+  <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Add jquery cdn -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+  
+  <script src="js/particles.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+   <script>
+
+  const  sectionns = document.getElementsByClassName('sectionns1');
+  const navli = document.querySelectorAll('.sidebar1 ul li');
+  window.addEventListener('scroll', ()=> {
+    let current = '';
+    sectionns.forEach(sectionns1 => {
+      const sectiontop = sectionns1.offsetTop;
+      const sectionheight = sectionns1.clientHeight;
+      if (pageYOffset >= (sectiontop - sectionheight / 3 ))  {
+        current = sectionns1.getAttributre('id');
+
+      }
+
+      
+    })
+
+   navli.forEach (li => {
+     li.classList.remove('active');
+     if (li.classList.contains ('current')) {
+       li.classList.add('active');
+
+     }
+
+
+   })
+    
+  
+  })
+
+
+
+       AOS.init();
+
+     $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+      $(this).parent().addClass('active');
+      $(this).parent().siblings().removeClass('active');
+      
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top - 100
+            }, 1000);
+            return false;
+        }
+    });
+});
+
+
+     var mybutton = document.getElementById("myBtn1");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+
+}
+
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+                  
+
+
+$('.sidebar-toggle').on ("click", function () {
+  $(".content1").toggleClass('margin1');
+  $(".sidebar1").toggleClass('margin2');
+
+});
+$(".sidebar1 ul li").on('click', function(){
+  $(this).addClass('active');
+
+    $(this).siblings().removeClass('active');
+  })
+var typed = new Typed('#typed', {
+  /**
+   * @property {array} strings strings to be typed
+   * @property {string} stringsElement ID of element containing string children
+   */
+  strings: [
+    'front end developer',
+    'web designer',
+    'web developer',
+  ],
+  stringsElement: null,
+
+  /**
+   * @property {number} typeSpeed type speed in milliseconds
+   */
+  typeSpeed: 50,
+
+  /**
+   * @property {number} startDelay time before typing starts in milliseconds
+   */
+  startDelay: 10,
+
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 40,
+
+  /**
+   * @property {boolean} smartBackspace only backspace what doesn't match the previous string
+   */
+  smartBackspace: true,
+
+  /**
+   * @property {boolean} shuffle shuffle the strings
+   */
+  shuffle: false,
+
+  /**
+   * @property {number} backDelay time before backspacing in milliseconds
+   */
+  backDelay: 700,
+
+  /**
+   * @property {boolean} fadeOut Fade out instead of backspace
+   * @property {string} fadeOutClass css class for fade animation
+   * @property {boolean} fadeOutDelay Fade out delay in milliseconds
+   */
+  fadeOut: false,
+  fadeOutClass: 'typed-fade-out',
+  fadeOutDelay: 500,
+
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+  /**
+   * @property {boolean} showCursor show cursor
+   * @property {string} cursorChar character for cursor
+   * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
+   */
+  showCursor: true,
+  cursorChar: '|',
+  autoInsertCss: true,
+
+  /**
+   * @property {string} attr attribute for typing
+   * Ex: input placeholder, value, or just HTML text
+   */
+  attr: null,
+
+  /**
+   * @property {boolean} bindInputFocusEvents bind to focus and blur if el is text input
+   */
+  bindInputFocusEvents: false,
+
+  /**
+   * @property {string} contentType 'html' or 'null' for plaintext
+   */
+  contentType: 'html',
+
+  /**
+   * Before it begins typing
+   * @param {Typed} self
+   */
+  onBegin: (self) => {},
+
+  /**
+   * All typing is complete
+   * @param {Typed} self
+   */
+  onComplete: (self) => {},
+
+  /**
+   * Before each string is typed
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  preStringTyped: (arrayPos, self) => {},
+
+  /**
+   * After each string is typed
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onStringTyped: (arrayPos, self) => {},
+
+  /**
+   * During looping, after last string is typed
+   * @param {Typed} self
+   */
+  onLastStringBackspaced: (self) => {},
+
+  /**
+   * Typing has been stopped
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onTypingPaused: (arrayPos, self) => {},
+
+  /**
+   * Typing has been started after being stopped
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onTypingResumed: (arrayPos, self) => {},
+
+  /**
+   * After reset
+   * @param {Typed} self
+   */
+  onReset: (self) => {},
+
+  /**
+   * After stop
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onStop: (arrayPos, self) => {},
+
+  /**
+   * After start
+   * @param {number} arrayPos
+   * @param {Typed} self
+   */
+  onStart: (arrayPos, self) => {},
+
+  /**
+   * After destroy
+   * @param {Typed} self
+   */
+  onDestroy: (self) => {}
+});
+
+
+
+      </script>
+</body>
+</html>
